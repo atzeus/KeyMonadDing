@@ -685,7 +685,7 @@ data Index l a where
   Tail  :: Index t x -> Index (h : t) x
 
 data TList l f where
-  TNil  :: TList [] f
+  TNil  :: TList '[] f
   (:::) :: f h -> TList t f -> TList (h : t) f
 
 index :: TList l f -> Index l a -> f a
