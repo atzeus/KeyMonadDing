@@ -671,7 +671,7 @@ The reading of the type parameter |v| is the type of \emph{variables}.
 For example, the lambda term |(\x y -> x)| can be constructed as follows:
 \begin{code}
 phoasExample :: Phoas v (x -> y -> x)
-phoasExample = PLam (\x -> PLam (\y -> x))
+phoasExample = PLam (\x -> PLam (\y -> PVar x))
 \end{code}
 An attractive property of parametric \hoas{} is that we use Haskell binding to construct syntax, and that terms of type |(forall v. Phoas v a)| are always well-scoped \cite{phoas}.
 
